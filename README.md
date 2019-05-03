@@ -1,25 +1,35 @@
-# README
+# MUST LOVE DOGS 
+Developed by Gabbie Piraino and Shari Rosenberg 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A fullstack Ruby on Rails dog services application. 
 
-Things you may want to cover:
+**WORK IN PROGRESS** 
 
-* Ruby version
+# Features and Functionality 
 
-* System dependencies
+stuff needs to go here blah blah blah 
 
-* Configuration
+## Built With 
+* Ruby 
+* Rails 
+* HTML5
+* CSS3
 
-* Database creation
+## Prerequisites 
 
-* Database initialization
+You will need `rails` and `bundle` installed on your computer in order to run this app. You will also need Postgres installed and running in order to create, migrate, and seed your database.
 
-* How to run the test suite
+In order to run this app, first clone this repo down onto your local machine and navigate to that directory. Then run `bundle install` in order to install all of the necessary gems locally. 
 
-* Services (job queues, cache servers, search engines, etc.)
+* `rails db:create`
+* `rails db:migrate`
+* `rails db:seed` 
+* `rails s` should then spin up your local server
 
-* Deployment instructions
+## Ruby Gems 
+* any? 
 
-* ...
-# must-love-dogs
+### Ruby Version 
+### Rails Version 
+### Bundle Version 
+
