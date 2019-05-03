@@ -10,15 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_25_021342) do
+ActiveRecord::Schema.define(version: 2019_01_21_153026) do
 
   create_table "appointments", force: :cascade do |t|
     t.integer "dog_id"
+    t.integer "caregiver_id_id"
+    t.integer "service_id_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "caregiver_id"
-    t.integer "service_id"
+    t.index ["caregiver_id_id"], name: "index_appointments_on_caregiver_id_id"
     t.index ["dog_id"], name: "index_appointments_on_dog_id"
+    t.index ["service_id_id"], name: "index_appointments_on_service_id_id"
   end
 
   create_table "caregivers", force: :cascade do |t|
@@ -63,11 +65,11 @@ ActiveRecord::Schema.define(version: 2019_01_25_021342) do
     t.string "full_name"
     t.integer "phone_number"
     t.string "neighborhood"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
     t.string "email"
     t.string "username"
     t.string "password_digest"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
