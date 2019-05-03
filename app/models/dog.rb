@@ -1,7 +1,8 @@
 class Dog < ApplicationRecord
   belongs_to :user
-  has_many :appointments
-  has_many :careserves, through: :appointments
+  has_many :appointments, dependent: :destroy
+  has_many :caregivers, through: :appointments
+  has_many :services, through: :appointments
 
   validates :name, presence: true
   validates :age, numericality: true
@@ -10,8 +11,4 @@ class Dog < ApplicationRecord
   validates :vet_name, presence: true
   validates :food_name, presence: true
 
-
-  def user_name
-    user.full_name
-  end
 end

@@ -5,41 +5,32 @@ class DogsController < ApplicationController
 
     def show
       @dog = Dog.find(params[:id])
-      #@users = @dog.users.all
+      @appointments = @dog.appointments
     end
 
     def new
       @dog = Dog.new
-      @users = User.all
-    
-
-
     end
 
-    def create
-      @dog = Dog.create(dog_params)
-        if @dog.valid?
-            redirect_to dog_path(@dog)
-        else
-        flash[:errors] = @dog.errors.full_messages
-          redirect_to new_dog_path
-        end
+  def create
+    @dog = Dog.create(dog_params)
+    if @dog.valid?
+      redirect_to dog_path(@dog)
+    else
+      flash[:errors] = @dog.errors.full_messages
+      redirect_to new_dog_path
+      end
     end
-
 
     def edit
       @dog = Dog.find(params[:id])
-
     end
 
     def update
       @dog = Dog.find(params[:id])
       @dog.update(dog_params)
         redirect_to dog_path(@dog)
-
     end
-
-
 
     def destroy
       @dog = Dog.find(params[:id])
