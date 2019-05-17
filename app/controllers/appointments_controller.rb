@@ -1,3 +1,4 @@
+require 'byebug'
 class AppointmentsController < ApplicationController
 
   def index
@@ -9,18 +10,21 @@ class AppointmentsController < ApplicationController
   end
 
   def new_30m_walk
-    session[:service_id] = 6
+
+    session[:service_id] = 1
     @appointment = Appointment.new
     id = session[:user_id]
+        # byebug
     @user = User.find_by(id: id)
     @dogs = @user.dogs
     @service = Service.first
     @caregivers = @service.halfwalk_caregivers
+
     render "new"
   end
 
   def new_1hr_walk
-    session[:service_id] = 7
+    session[:service_id] = 2
     @appointment = Appointment.new
     id = session[:user_id]
     @user = User.find_by(id: id)
@@ -31,7 +35,7 @@ class AppointmentsController < ApplicationController
   end
 
   def new_overnight
-    session[:service_id] = 8
+    session[:service_id] = 3
     @appointment = Appointment.new
     id = session[:user_id]
     @user = User.find_by(id: id)
@@ -42,7 +46,7 @@ class AppointmentsController < ApplicationController
   end
 
   def new_grooming
-    session[:service_id] = 9
+    session[:service_id] = 4
     @appointment = Appointment.new
     id = session[:user_id]
     @user = User.find_by(id: id)
@@ -53,7 +57,7 @@ class AppointmentsController < ApplicationController
   end
 
   def new_vet
-    session[:service_id] = 10
+    session[:service_id] = 5
     @appointment = Appointment.new
     id = session[:user_id]
     @user = User.find_by(id: id)
