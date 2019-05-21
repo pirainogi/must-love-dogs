@@ -14,13 +14,13 @@ ActiveRecord::Schema.define(version: 2019_01_21_153026) do
 
   create_table "appointments", force: :cascade do |t|
     t.integer "dog_id"
-    t.integer "caregiver_id_id"
-    t.integer "service_id_id"
+    t.integer "caregiver_id"
+    t.integer "service_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["caregiver_id_id"], name: "index_appointments_on_caregiver_id_id"
+    t.index ["caregiver_id"], name: "index_appointments_on_caregiver_id"
     t.index ["dog_id"], name: "index_appointments_on_dog_id"
-    t.index ["service_id_id"], name: "index_appointments_on_service_id_id"
+    t.index ["service_id"], name: "index_appointments_on_service_id"
   end
 
   create_table "caregivers", force: :cascade do |t|
