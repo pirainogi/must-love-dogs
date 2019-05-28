@@ -9,7 +9,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<body>
+<body class="body">
   <div class="header">
     <p>MUST LOVE DOGS</p>
   </div>
@@ -29,9 +29,9 @@
 
       <%= form_tag("/sessions") do %>
         <%= label_tag :username %>
-        <%= text_field_tag :username %><br></br>
+        <%= text_field_tag :username %><br>
         <%= label_tag :password %>
-        <%= password_field_tag :password %><br></br>
+        <%= password_field_tag :password %><br>
 
         <%= submit_tag "Log in" %>
       <% end %><br>

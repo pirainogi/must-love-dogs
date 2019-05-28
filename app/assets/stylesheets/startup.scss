@@ -3,7 +3,14 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+}
+
+.body {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 // body {
@@ -20,10 +27,13 @@
   font-style: bold;
   background: lightgreen;
   text-align: center;
+  width: 100%;
 }
 
 .gif {
   text-align: center;
+  width: 100%;
+
 }
 
 .gif p {
@@ -31,11 +41,13 @@
   font-size: 20px;
   font-style: italic;
   background:lightgreen;
+  width: 100%;
 }
 
 /* Style the header */
 .login-form {
   background-color: #f1f1f1;
+  width: 100%;
   padding: 30px;
   text-align: center;
   font-size: 10px;
@@ -45,10 +57,12 @@
 
 .login {
   grid-column-start: first;
+  align-content: center;
 }
 
 .signup {
   grid-column-start: divider;
+  align-content: center;
 }
 
 
