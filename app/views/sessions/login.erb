@@ -9,44 +9,45 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
-<p style = "font-family:Arial, Helvetica, sans-serif;font-size:100px; color:MediumSeaGreen;font-style:bold;background:lightgreen;">MUST LOVE DOGS</p>
-
-<iframe src="https://giphy.com/embed/4Zo41lhzKt6iZ8xff9" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
-<p><a href="https://giphy.com/gifs/4Zo41lhzKt6iZ8xff9">via GIPHY</a></p>
-
-<p style="font-family:georgia,garamond,serif;font-size:30px;font-style:italic;background:lightgreen;"> We love your dog as much as you do!! </p>
-
-<header>
+<body>
   <div class="header">
+    <p>MUST LOVE DOGS</p>
+  </div>
 
-    <h5>Login</h5>
-    <% if flash[:unauthenticated] %>
-      <p style="color:red;"><%= flash[:unauthenticated] %></p>
-    <% end %>
+  <div class="gif">
+    <iframe src="https://giphy.com/embed/4Zo41lhzKt6iZ8xff9" class="giphy-embed" allowFullScreen></iframe>
 
-    <%= form_tag("/sessions") do %>
-      <%= label_tag :username %>
-      <%= text_field_tag :username %>
-      <%= label_tag :password %>
-      <%= password_field_tag :password %>
+    <p> We love your dog as much as you do!! </p>
+  </div>
 
-      <%= submit_tag "Log in" %>
-    <% end %><br>
+  <div class="login-form">
+    <div class="login">
+      <h5>Login</h5>
+      <% if flash[:unauthenticated] %>
+        <p style="color:red;"><%= flash[:unauthenticated] %></p>
+      <% end %>
 
-    <h5> New User?</h5> <%= button_to "Sign Up Here", new_user_path, :method => "get" %>
+      <%= form_tag("/sessions") do %>
+        <%= label_tag :username %>
+        <%= text_field_tag :username %><br></br>
+        <%= label_tag :password %>
+        <%= password_field_tag :password %><br></br>
 
-  </header>
+        <%= submit_tag "Log in" %>
+      <% end %><br>
+    </div>
+    <div class="signup">
+      <h5> New User?</h5> <%= button_to "Sign Up Here", new_user_path, :method => "get" %>
+    </div>
+  </div>
 
-  <body>
-    <div class="row">
-
-     <div class="column" style="background-color:#bbb;"><%= link_to "Half Hour Walk", service_path(@halfhrwalk) %> <br><br>
-       <div id="box" style="background-size: cover; background-image: url('https://yallacompare.com/newtotown/uae/wp-content/uploads/2016/04/Dog-Walking-1170x500.jpg');">
-       </div>
+  <div class="row">
+    <div class="column" style="background-color:#bbb;"><%= link_to "Half Hour Walk", service_path(@halfhrwalk) %> <br><br>
+     <div id="box" style="background-size: cover; background-image: url('https://yallacompare.com/newtotown/uae/wp-content/uploads/2016/04/Dog-Walking-1170x500.jpg');">
      </div>
+   </div>
 
-     <div class="column" style="background-color:#ddd;"><%= link_to "Full Hour Walk", service_path(@hrwalk)%><br><br>
+    <div class="column" style="background-color:#ddd;"><%= link_to "Full Hour Walk", service_path(@hrwalk)%><br><br>
        <div id="box" style="background-size: cover; background-image: url('https://image1.masterfile.com/getImage/NjQ5LTA4ODQwNzkxZW4uMDAwMDAwMDA=AB-HdO/649-08840791en_Masterfile.jpg');">
        </div>
      </div>
@@ -63,13 +64,13 @@
 
      <div class="column" style="background-color:#bbb;"><%= link_to "Grooming", service_path(@groom)%><br><br>
        <div id="box" style="background-size: cover; background-image: url('https://thumbs.dreamstime.com/z/dog-grooming-handsome-golden-retriever-getting-his-fur-dried-blower-groomer-49146750.jpg');">
-     </div>=
+     </div>
    </div>
 
     <div class="footer">
       <p>contact us: Shari @flatiron  or Gabbie @flatiron</p>
     </div>
+  </div>
 
   </body>
-
 </html>
