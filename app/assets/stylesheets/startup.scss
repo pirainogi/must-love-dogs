@@ -28,12 +28,13 @@
   background: lightgreen;
   text-align: center;
   width: 100%;
+  padding-top: 10px;
 }
 
 .gif {
   text-align: center;
   width: 100%;
-
+  padding: 3% 3% 3% 3%;
 }
 
 .gif p {
@@ -42,6 +43,7 @@
   font-style: italic;
   background:lightgreen;
   width: 100%;
+  margin-top: 1%
 }
 
 /* Style the header */
@@ -69,26 +71,28 @@
 /* Create three equal columns that floats next to each other */
 .column {
   /*float: left;*/
-  width: 20%;
-  padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
+  // width: 20%;
+  // padding: 10px;
+  // height: 300px; /* Should be removed. Only for demonstration */
   border: 2px solid green;
   border-radius: 12px;
 }
 
 /* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+// .row:after {
+//   content: "";
+//   display: table;
+//   clear: both;
+// }
 
 /* Style the footer */
 .footer {
   background-color: #f1f1f1;
-  padding: 10px;
+  padding-top: 10px;
+  padding-right: 20px;
   text-align: right;
   font-size: 10px;
+  width: 100%;
 }
 #box{
   display: block;
@@ -97,7 +101,6 @@
   width: 80%;
   height: 50%;
   background:#f1f1f1;
-
 }
 
 img {
